@@ -1,7 +1,7 @@
 class Observer<T> where T: Equatable {
     private var observers: [(_ oldValue: T, _ newValue: T) -> Void] = []
     private var observerIds: [Int] = []
-    private var lastId = 0
+    private var lastId = 1
 
     var obj: T {
         didSet {
