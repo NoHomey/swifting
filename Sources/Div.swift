@@ -10,9 +10,7 @@ class Div {
     }
 
     deinit {
-        if(self.attributes.value != nil) {
-            self.attributes.value!.unsubscribe(id: subscription)
-        }
+        self.attributes.value?.unsubscribe(id: subscription)
     }
 
     func sync(_ oldValue: String, _ newValue: String) {
